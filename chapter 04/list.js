@@ -27,9 +27,21 @@ function listToArray(list) {
     return arr;
 }
 
-function prepend(list, elem){
+function prepend(list, elem) {
     return {
         value: elem,
         rest: list
     }
+}
+
+function nth(list, position) {
+    if (list === null) {
+        return undefined;
+    } else {
+        if (1 === position) {
+            return list.value;
+        } else {
+            return nth(list.next, --position);
+        }
+    }n
 }
