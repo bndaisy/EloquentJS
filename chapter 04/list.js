@@ -41,7 +41,7 @@ function nth(list, position) {
         if (1 === position) {
             return list.value;
         } else {
-            return nth(list.next, --position);
+            return nth(list.rest, --position);
         }
-    }n
+    }
 }
