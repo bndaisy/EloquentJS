@@ -4,12 +4,10 @@ When defining the function, you can use a regular loop to do the actual looping.
 
 */
 
-let i;
-
 function loop(value, condition, iteration, body) {
     if (condition(value)) {
         body(value);
-        i = iteration(value);
+        let i = iteration(value);
         loop(i, condition, iteration, body);
     }
 }
