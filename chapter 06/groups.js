@@ -6,24 +6,24 @@ class Group {
         this.group = [];
     }
 
-    add(x) {
-        if (!this.has(x)) {
-            this.group.push(x);
+    add(value) {
+        if (!this.has(value)) {
+            this.group.push(value);
         }
     }
 
-    delete(x) {
-        this.group = this.group.filter((item) => item !== x)
+    delete(value) {
+        this.group = this.group.filter((item) => item !== value)
     }
 
-    has(x) {
-        return this.group.includes(x);
+    has(value) {
+        return this.group.includes(value);
     }
 
-    static from(arr) {
+    static from(array) {
         let group = new Group();
-        for (let i of arr) {
-            group.add(i)
+        for (let value of array) {
+            group.add(value)
         }
         return group;
     }
